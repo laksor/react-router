@@ -4,11 +4,12 @@ import Home from './Components/Home/Home';
 import Friends from './Components/Friends/Friends';
 import About from './Components/About/About';
 import NotFound from './Components/NotFound/NotFound';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to my Routing Display</h1>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path='friends' element={<Friends />}></Route>
