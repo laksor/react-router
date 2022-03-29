@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Friend from "../Friend/Friend";
 import "./Friends.css";
 
 const Friends = () => {
@@ -10,7 +11,13 @@ const Friends = () => {
   }, []);
   return (
     <div>
-      <h1>Friends</h1>
+      <h1>All Friends</h1>
+      {
+          friends.map(friend => <Friend 
+            key={friend.id} 
+            friend={friend}
+            ></Friend>)
+      }
     </div>
   );
 };
