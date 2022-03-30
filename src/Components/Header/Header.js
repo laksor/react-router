@@ -1,4 +1,5 @@
 import React from "react";
+import CustomLink from "../CustomLink/CustomLink";
 import "./Header.css";
 
 const Header = () => {
@@ -6,9 +7,9 @@ const Header = () => {
     <div>
       <h1>welcome Header</h1>
       <nav>
-        <a href="/">Home</a>
-        <a href="/friends">Friends</a>
-        <a href="/about">About</a>
+        <CustomLink to="/">Home</CustomLink>
+        <CustomLink to="/friends">Friends</CustomLink>
+        <CustomLink to="/about">About</CustomLink>
       </nav>
     </div>
   );
