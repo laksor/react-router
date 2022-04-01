@@ -10,13 +10,14 @@ const FriendDetails = () => {
             .then(res => res.json())
             .then(data => setFriend(data));
     }, [friendId])
-    
+
     return (
         <div>
             <h1>Details Bondhu {friendId}</h1>
             <h1>name : {friend.name}</h1>
             <h1>email : {friend.email}</h1>
-            <h1>Address : {friend.address?.street}</h1>
+            <h1>Address : {friend.address?.city} </h1>
+            <h2>Phone : {friend.phone} </h2>
         </div>
     );
 };
