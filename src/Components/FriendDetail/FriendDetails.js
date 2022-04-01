@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Friend from '../Friend/Friend';
 
 const FriendDetails = () => {
     const {friendId} = useParams();
+    const [friend, setFriend] = useState([]);
+    useEffect(()=>{
+        const url = `https://jsonplaceholder.typicode.com/users/${friendId}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setFriend(data));
+    }, [friendId])
+    
     return (
         <div>
-            <h1>Details bondhu {friendId}</h1>
+            <h1>Details Bondhu {friendId}</h1>
+            <h1>name : {friend.name}</h1>
+            <h1>email : {friend.email}</h1>
+            <h1>Address : {friend.address?.street}</h1>
         </div>
     );
 };
