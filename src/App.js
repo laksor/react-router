@@ -7,6 +7,7 @@ import NotFound from './Components/NotFound/NotFound';
 import Header from './Components/Header/Header';
 import FriendDetails from './Components/FriendDetail/FriendDetails';
 import Post from './Components/Posts/Post';
+import Postdetails from './Components/Postdetails/Postdetails';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path='friends' element={<Friends />}></Route>
         <Route path='/friend/:friendId' element={<FriendDetails></FriendDetails>}></Route>
         <Route path='/posts' element={<Post></Post>}>
-          <Route path=':postId' element={}></Route>
+          <Route path=':postId' element={<Postdetails></Postdetails>}></Route>
         </Route>
         <Route path='about' element={<About />}></Route>
         <Route path='*' element={<NotFound />}></Route>
